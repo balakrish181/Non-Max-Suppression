@@ -27,8 +27,8 @@ def IOU(box1, box2):
 	y_inter1 = max(y1, y3)
 	x_inter2 = min(x2, x4)
 	y_inter2 = min(y2, y4)
-	width_inter = abs(x_inter2 - x_inter1)
-	height_inter = abs(y_inter2 - y_inter1)
+	width_inter = max(0,x_inter2 - x_inter1)
+	height_inter = max(0,y_inter2 - y_inter1)
 	area_inter = width_inter * height_inter
 	width_box1 = abs(x2 - x1)
 	height_box1 = abs(y2 - y1)
